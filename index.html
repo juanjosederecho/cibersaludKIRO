@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBERSALUD 360 - CONAMIR Rosaspata</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E7D32">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🏔️ CIBERSALUD 360</h1>
+                    <p>CONAMIR - Rosaspata, Huancané, Puno</p>
+                </div>
+                <div class="user-greeting" id="userGreeting" style="display: none;">
+                    <span id="greetingText"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs" id="navTabs" style="display: none;">
+            <button class="nav-tab active" onclick="showScreen('consulta')">🩺 Consulta</button>
+            <button class="nav-tab" onclick="showScreen('recomendaciones')">📋 Recomendaciones</button>
+            <button class="nav-tab" onclick="showScreen('historial')">📝 Historial</button>
+            <button class="nav-tab" onclick="showScreen('equipo')">👥 Equipo</button>
+        </nav>
+
+        <!-- Pantalla Principal: Iniciar Consulta -->
+        <div id="screen-inicio" class="screen active">
+            <div class="welcome-section">
+                <div class="altiplano-banner">
+                    <h2>🌄 Bienvenido a CIBERSALUD 360</h2>
+                    <p>Orientación en salud preventiva para el altiplano de Puno</p>
+                    <small>Desarrollado por estudiantes de CONAMIR - Rosaspata, Huancané</small>
+                </div>
+
+                <div class="name-input-section">
+                    <label for="userName">Ingresa tu nombre para personalizar tu experiencia:</label>
+                    <input type="text" id="userName" placeholder="Tu nombre completo" required>
+                    <button onclick="startConsultation()" class="btn-primary">Iniciar Consulta</button>
+
+                    <!-- Botón de prueba para WhatsApp -->
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
+                            ¿Necesitas ayuda médica inmediata?
+                        </p>
+                        <button onclick="testWhatsAppConnection()" class="btn-doctor" style="width: 100%;">
+                            📞 Probar conexión WhatsApp
+                        </button>
+                        <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.5rem;">
+                            Número: +51 900 973 658
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla 1: Síntomas Generales -->
+        <div id="screen-consulta" class="screen">
+            <div class="symptoms-section">
+                <h3 id="consultaTitle">Selecciona los síntomas que presentas</h3>
+                <p class="instruction">Elige entre 4 o 5 síntomas que mejor describan tu situación actual</p>
+
+                <div class="symptoms-grid" id="symptomsGrid">
+                    <!-- Síntomas generales se cargarán aquí -->
+                </div>
+
+                <div class="selected-count">
+                    <span id="selectedCount">0</span> síntomas seleccionados
+                </div>
+
+                <button id="continueBtn" onclick="goToRefinement()" class="btn-primary" disabled>
+                    Continuar ➡️
+                </button>
+            </div>
+        </div>
+
+        <!-- Pantalla 2: Refinamiento de Síntomas -->
+        <div id="screen-refinamiento" class="screen">
+            <div class="symptoms-section">
+                <h3 id="refinamientoTitle">Síntomas más específicos</h3>
+                <p class="instruction">Selecciona los síntomas que mejor te identifiquen</p>
+
+                <div class="symptoms-grid" id="refinementGrid">
+                    <!-- Síntomas específicos se cargarán aquí -->
+                </div>
+
+                <button onclick="showDiagnosis()" class="btn-primary">
+                    Ver posible diagnóstico 🔍
+                </button>
+            </div>
+        </div>
+
+        <!-- Pantalla 3: Diagnóstico y Consejos -->
+        <div id="screen-diagnostico" class="screen">
+            <div class="diagnosis-section">
+                <div class="diagnosis-card">
+                    <h3 id="diagnosisTitle"></h3>
+                    <div id="diagnosisContent"></div>
+                    <div class="recommendations" id="recommendations"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button onclick="goToDoctor()" class="btn-doctor">
+                        📞 Consultar por WhatsApp
+                    </button>
+                    <button onclick="newConsultation()" class="btn-secondary">
+                        🔄 Nueva consulta
+                    </button>
+                </div>
+
+                <div class="whatsapp-info"
+                    style="margin-top: 1rem; padding: 1rem; background: rgba(37, 211, 102, 0.1); border-radius: 8px; text-align: center;">
+                    <p style="font-size: 0.9rem; color: var(--text-dark); margin-bottom: 0.5rem;">
+                        📱 <strong>Número de consultas médicas:</strong> +51 900 973 658
+                    </p>
+                    <p style="font-size: 0.8rem; color: var(--text-light);">
+                        Servicio disponible las 24 horas para el altiplano de Puno
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla: Recomendaciones -->
+        <div id="screen-recomendaciones" class="screen">
+            <div class="recommendations-section">
+                <h3>📋 Recomendaciones de Salud para el Altiplano</h3>
+                <div class="disease-recommendations" id="diseaseRecommendations">
+                    <!-- Recomendaciones por enfermedad -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla: Historial -->
+        <div id="screen-historial" class="screen">
+            <div class="history-section">
+                <h3>📝 Historial de Consultas</h3>
+                <button onclick="newConsultation()" class="btn-primary">
+                    🆕 Iniciar nueva consulta
+                </button>
+                <div id="historyList" class="history-list">
+                    <!-- Historial se cargará aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla: Equipo -->
+        <div id="screen-equipo" class="screen">
+            <div class="team-section">
+                <h3>👥 Nuestro Equipo CONAMIR</h3>
+                <p class="team-intro">Estudiantes comprometidos con la salud del altiplano puneño</p>
+                <div class="team-grid" id="teamGrid">
+                    <!-- Equipo se cargará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
