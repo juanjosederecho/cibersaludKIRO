@@ -64,10 +64,15 @@ const diseases = {
         symptoms: ['fiebre', 'tos', 'dolor_garganta', 'congestion'],
         image: '🫁',
         illustrativeImages: ['🌡️', '🤧', '🍵', '🧣'],
+        realImages: [
+            'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Mates calientes de muña 🍵', 'Sopas nutritivas 🍲', 'Miel de abeja 🍯', 'Cítricos cuando sea posible 🍊'],
-            habitos: ['Abrigarse bien 🧥', 'Evitar cambios bruscos de temperatura 🌡️', 'Descansar adecuadamente 😴'],
-            prevencion: ['Lavado frecuente de manos 🧼', 'Evitar aglomeraciones 👥', 'Mantener ambientes ventilados 🪟']
+            alimentos: ['Mates calientes de muña', 'Sopas nutritivas', 'Miel de abeja', 'Cítricos cuando sea posible'],
+            habitos: ['Abrigarse bien', 'Evitar cambios bruscos de temperatura', 'Descansar adecuadamente'],
+            prevencion: ['Lavado frecuente de manos', 'Evitar aglomeraciones', 'Mantener ambientes ventilados']
         }
     },
     bronquitis: {
@@ -76,10 +81,15 @@ const diseases = {
         symptoms: ['tos', 'dificultad_respirar', 'silbido_pecho', 'fatiga'],
         image: '🫁',
         illustrativeImages: ['💨', '🌿', '🍯', '🚭'],
+        realImages: [
+            'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Infusiones de eucalipto 🌿', 'Miel con limón 🍯🍋', 'Caldos calientes 🍲'],
-            habitos: ['Evitar el humo 🚭', 'Humidificar el ambiente 💧', 'Ejercicios respiratorios suaves 🧘'],
-            prevencion: ['No fumar 🚭', 'Evitar contaminantes 🏭', 'Mantener buena higiene respiratoria 😷']
+            alimentos: ['Infusiones de eucalipto', 'Miel con limón', 'Caldos calientes'],
+            habitos: ['Evitar el humo', 'Humidificar el ambiente', 'Ejercicios respiratorios suaves'],
+            prevencion: ['No fumar', 'Evitar contaminantes', 'Mantener buena higiene respiratoria']
         }
     },
     neumonia: {
@@ -88,10 +98,15 @@ const diseases = {
         symptoms: ['fiebre', 'dificultad_respirar', 'dolor_pecho', 'tos_sangre'],
         image: '🫁',
         illustrativeImages: ['🚨', '🏥', '💊', '🌡️'],
+        realImages: [
+            'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Líquidos abundantes 💧', 'Caldos nutritivos 🍲', 'Frutas ricas en vitamina C 🍊'],
-            habitos: ['Reposo absoluto 🛏️', 'Seguir tratamiento médico 💊', 'Evitar esfuerzos ⚠️'],
-            prevencion: ['Vacunación 💉', 'Evitar exposición al frío extremo ❄️', 'Fortalecer sistema inmune 💪']
+            alimentos: ['Líquidos abundantes', 'Caldos nutritivos', 'Frutas ricas en vitamina C'],
+            habitos: ['Reposo absoluto', 'Seguir tratamiento médico', 'Evitar esfuerzos'],
+            prevencion: ['Vacunación', 'Evitar exposición al frío extremo', 'Fortalecer sistema inmune']
         }
     },
     eda: {
@@ -100,10 +115,15 @@ const diseases = {
         symptoms: ['diarrea', 'dolor_estomago', 'nauseas', 'deshidratacion'],
         image: '🤢',
         illustrativeImages: ['💧', '🍚', '🧼', '🔥'],
+        realImages: [
+            'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Suero casero 💧🧂', 'Arroz blanco 🍚', 'Plátano maduro 🍌', 'Agua hervida 🔥💧'],
-            habitos: ['Hidratación constante 💧', 'Reposo digestivo 🛏️', 'Higiene estricta 🧼'],
-            prevencion: ['Hervir el agua 🔥💧', 'Lavar bien los alimentos 🧼🥬', 'Higiene de manos 🧼👐']
+            alimentos: ['Suero casero', 'Arroz blanco', 'Plátano maduro', 'Agua hervida'],
+            habitos: ['Hidratación constante', 'Reposo digestivo', 'Higiene estricta'],
+            prevencion: ['Hervir el agua', 'Lavar bien los alimentos', 'Higiene de manos']
         }
     },
     parasitosis: {
@@ -112,10 +132,15 @@ const diseases = {
         symptoms: ['dolor_estomago', 'diarrea', 'perdida_peso', 'fatiga'],
         image: '🪱',
         illustrativeImages: ['🧄', '🎃', '🧼', '🔥'],
+        realImages: [
+            'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Ajo crudo 🧄', 'Semillas de zapallo 🎃', 'Papaya 🥭', 'Agua hervida 🔥💧'],
-            habitos: ['Desparasitación regular 💊', 'Higiene personal 🧼', 'Cocinar bien los alimentos 🔥🍖'],
-            prevencion: ['Lavar frutas y verduras 🧼🥬', 'Agua segura 💧✅', 'Evitar carnes crudas 🚫🥩']
+            alimentos: ['Ajo crudo', 'Semillas de zapallo', 'Papaya', 'Agua hervida'],
+            habitos: ['Desparasitación regular', 'Higiene personal', 'Cocinar bien los alimentos'],
+            prevencion: ['Lavar frutas y verduras', 'Agua segura', 'Evitar carnes crudas']
         }
     },
     anemia: {
@@ -124,10 +149,15 @@ const diseases = {
         symptoms: ['fatiga', 'mareos', 'piel_palida', 'dificultad_respirar'],
         image: '🩸',
         illustrativeImages: ['🌾', '🫘', '🦙', '🥬'],
+        realImages: [
+            'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Quinua 🌾', 'Habas 🫘', 'Carne de alpaca 🦙', 'Espinacas 🥬', 'Hígado 🫀'],
-            habitos: ['Ejercicio moderado 🚶', 'Exposición al sol ☀️', 'Suplementos de hierro 💊'],
-            prevencion: ['Dieta rica en hierro 🥩', 'Vitamina C para absorción 🍊', 'Control médico regular 👩‍⚕️']
+            alimentos: ['Quinua', 'Habas', 'Carne de alpaca', 'Espinacas', 'Hígado'],
+            habitos: ['Ejercicio moderado', 'Exposición al sol', 'Suplementos de hierro'],
+            prevencion: ['Dieta rica en hierro', 'Vitamina C para absorción', 'Control médico regular']
         }
     },
     desnutricion: {
@@ -136,10 +166,15 @@ const diseases = {
         symptoms: ['perdida_peso', 'fatiga', 'crecimiento_lento', 'infecciones_frecuentes'],
         image: '⚖️',
         illustrativeImages: ['🌾', '🥛', '🍖', '👶'],
+        realImages: [
+            'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Quinua 🌾', 'Kiwicha 🌾', 'Leche y derivados 🥛', 'Carnes 🍖', 'Legumbres 🫘'],
-            habitos: ['Comidas frecuentes 🍽️⏰', 'Suplementos nutricionales 💊', 'Control de peso ⚖️'],
-            prevencion: ['Alimentación balanceada 🥗', 'Lactancia materna 🤱', 'Control nutricional 📊']
+            alimentos: ['Quinua', 'Kiwicha', 'Leche y derivados', 'Carnes', 'Legumbres'],
+            habitos: ['Comidas frecuentes', 'Suplementos nutricionales', 'Control de peso'],
+            prevencion: ['Alimentación balanceada', 'Lactancia materna', 'Control nutricional']
         }
     },
     hipertension: {
@@ -148,10 +183,15 @@ const diseases = {
         symptoms: ['dolor_cabeza', 'mareos', 'vision_borrosa', 'palpitaciones'],
         image: '💓',
         illustrativeImages: ['🩺', '🧂', '🥗', '🏃'],
+        realImages: [
+            'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Reducir sal 🧂❌', 'Frutas y verduras 🥗', 'Pescado 🐟', 'Evitar frituras 🍟❌'],
-            habitos: ['Ejercicio regular 🏃', 'Control de peso ⚖️', 'Reducir estrés 🧘', 'No fumar 🚭'],
-            prevencion: ['Dieta baja en sodio 🧂⬇️', 'Actividad física 🏃', 'Control médico regular 🩺']
+            alimentos: ['Reducir sal', 'Frutas y verduras', 'Pescado', 'Evitar frituras'],
+            habitos: ['Ejercicio regular', 'Control de peso', 'Reducir estrés', 'No fumar'],
+            prevencion: ['Dieta baja en sodio', 'Actividad física', 'Control médico regular']
         }
     },
     diabetes: {
@@ -160,10 +200,15 @@ const diseases = {
         symptoms: ['sed_excesiva', 'vision_borrosa', 'fatiga', 'hormigueo'],
         image: '🍯',
         illustrativeImages: ['🩸', '🌾', '🥗', '🏃'],
+        realImages: [
+            'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Quinua 🌾', 'Verduras 🥗', 'Carnes magras 🍖', 'Evitar azúcares 🍬❌'],
-            habitos: ['Control de glucosa 🩸📊', 'Ejercicio diario 🏃', 'Medicación puntual 💊⏰'],
-            prevencion: ['Dieta balanceada 🥗', 'Peso saludable ⚖️✅', 'Actividad física regular 🏃']
+            alimentos: ['Quinua', 'Verduras', 'Carnes magras', 'Evitar azúcares'],
+            habitos: ['Control de glucosa', 'Ejercicio diario', 'Medicación puntual'],
+            prevencion: ['Dieta balanceada', 'Peso saludable', 'Actividad física regular']
         }
     },
     dermatitis: {
@@ -172,10 +217,15 @@ const diseases = {
         symptoms: ['piel_seca', 'picazon_intensa', 'grietas_piel', 'descamacion'],
         image: '🧴',
         illustrativeImages: ['❄️', '🧴', '🧥', '💧'],
+        realImages: [
+            'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center',
+            'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop&crop=center'
+        ],
         recommendations: {
-            alimentos: ['Aceites naturales 🫒', 'Vitamina E 💊', 'Agua abundante 💧'],
-            habitos: ['Hidratación de piel 🧴', 'Protección del frío 🧥', 'Ropa adecuada 👕'],
-            prevencion: ['Cremas protectoras 🧴', 'Evitar jabones fuertes 🧼❌', 'Humidificar ambiente 💨']
+            alimentos: ['Aceites naturales', 'Vitamina E', 'Agua abundante'],
+            habitos: ['Hidratación de piel', 'Protección del frío', 'Ropa adecuada'],
+            prevencion: ['Cremas protectoras', 'Evitar jabones fuertes', 'Humidificar ambiente']
         }
     }
 };
@@ -362,7 +412,7 @@ function showDiagnosis() {
         <p style="color: var(--text-light); margin-bottom: 1.5rem;">
             ${diagnosis.description}
         </p>
-        <div style="background: rgba(231, 76, 60, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--danger-color);">
+        <div style="background: rgba(244, 166, 166, 0.15); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--danger-color);">
             <strong>⚠️ Importante:</strong> Esta aplicación CIBERSALUD 360 de CONAMIR es solo orientativa. 
             No reemplaza la consulta médica profesional. Te recomendamos acudir a un centro de salud 
             en Huancané o Puno para un diagnóstico preciso.
@@ -409,19 +459,19 @@ function generateRecommendationsHTML(diagnosis) {
     return `
         <div class="recommendation-grid">
             <div class="recommendation-item">
-                <h5>🍽️ Alimentos Recomendados</h5>
+                <h5>Alimentos Recomendados</h5>
                 <ul>
                     ${recs.alimentos.map(item => `<li>${item}</li>`).join('')}
                 </ul>
             </div>
             <div class="recommendation-item">
-                <h5>💪 Hábitos Saludables</h5>
+                <h5>Hábitos Saludables</h5>
                 <ul>
                     ${recs.habitos.map(item => `<li>${item}</li>`).join('')}
                 </ul>
             </div>
             <div class="recommendation-item">
-                <h5>🛡️ Prevención</h5>
+                <h5>Prevención</h5>
                 <ul>
                     ${recs.prevencion.map(item => `<li>${item}</li>`).join('')}
                 </ul>
@@ -473,19 +523,40 @@ function testWhatsAppConnection() {
 }
 
 function newConsultation() {
+    // Limpiar todos los datos del usuario anterior
     selectedSymptoms = [];
     selectedRefinement = [];
     currentDiagnosis = null;
+    currentUser = '';
     
     // Limpiar selecciones visuales
     document.querySelectorAll('.symptom-card').forEach(card => {
         card.classList.remove('selected');
     });
     
+    // Limpiar el campo de nombre
+    const nameInput = document.getElementById('userName');
+    if (nameInput) {
+        nameInput.value = '';
+    }
+    
+    // Ocultar el saludo del usuario
+    const greetingContainer = document.getElementById('userGreeting');
+    if (greetingContainer) {
+        greetingContainer.style.display = 'none';
+    }
+    
+    // Ocultar las pestañas de navegación
+    const navTabs = document.getElementById('navTabs');
+    if (navTabs) {
+        navTabs.style.display = 'none';
+    }
+    
     updateSelectedCount();
     updateContinueButton();
     
-    showScreen('consulta');
+    // Regresar a la pantalla de inicio para nuevo usuario
+    showScreen('inicio');
 }
 
 function renderRecommendations() {
@@ -497,18 +568,27 @@ function renderRecommendations() {
         const card = document.createElement('div');
         card.className = 'disease-card';
         
-        // Crear galería de imágenes ilustrativas
-        const imageGallery = disease.illustrativeImages ? 
+        // Crear galería de imágenes ilustrativas con emojis
+        const emojiGallery = disease.illustrativeImages ? 
             `<div class="disease-images" style="text-align: center; margin: 1rem 0; font-size: 2rem;">
                 ${disease.illustrativeImages.join(' ')}
+            </div>` : '';
+        
+        // Crear galería de imágenes reales
+        const realImageGallery = disease.realImages ? 
+            `<div class="real-images-gallery" style="display: flex; gap: 0.5rem; justify-content: center; margin: 1rem 0; flex-wrap: wrap;">
+                ${disease.realImages.map(imageUrl => 
+                    `<img src="${imageUrl}" alt="${disease.name}" style="width: 120px; height: 80px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">`
+                ).join('')}
             </div>` : '';
         
         card.innerHTML = `
             <h4>${disease.image} ${disease.name}</h4>
             <p style="margin-bottom: 1rem; color: var(--text-light);">${disease.description}</p>
-            ${imageGallery}
+            ${emojiGallery}
+            ${realImageGallery}
             ${generateRecommendationsHTML(disease)}
-            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(46, 125, 50, 0.05); border-radius: 8px; text-align: center;">
+            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(168, 213, 186, 0.1); border-radius: 8px; text-align: center;">
                 <p style="margin-bottom: 1rem; font-weight: 500; color: var(--primary-color);">
                     ¿Presentas estos síntomas? Consulta con un profesional
                 </p>

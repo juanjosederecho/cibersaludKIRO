@@ -1,17 +1,23 @@
-/* Variables CSS para colores del altiplano */
+/* Variables CSS para colores cálidos inspirados en el altiplano */
 :root {
-    --primary-color: #2E7D32; /* Verde andino */
-    --secondary-color: #FF6B35; /* Naranja cálido */
-    --accent-color: #1565C0; /* Azul cielo altiplano */
-    --text-dark: #2C3E50;
-    --text-light: #7F8C8D;
-    --background: #F8F9FA;
+    --primary-color: #FF9500; /* Naranja cálido principal */
+    --secondary-color: #FFB84D; /* Naranja suave */
+    --accent-color: #FFC266; /* Naranja claro */
+    --tertiary-color: #FFD699; /* Naranja muy claro */
+    --quaternary-color: #FFF2E6; /* Crema naranja */
+    --text-dark: #8B4513; /* Marrón cálido para texto */
+    --text-light: #CD853F; /* Marrón claro */
+    --background: #FFF8F0; /* Crema muy suave */
     --card-bg: #FFFFFF;
-    --border-color: #E0E0E0;
-    --success-color: #27AE60;
-    --warning-color: #F39C12;
-    --danger-color: #E74C3C;
-    --altiplano-gold: #D4AF37;
+    --border-color: #FFE4CC; /* Naranja muy pálido */
+    --success-color: #FF9500; /* Naranja para éxito */
+    --warning-color: #FFB84D; /* Naranja medio para advertencias */
+    --danger-color: #FF6B35; /* Naranja rojizo para peligro */
+    --altiplano-gold: #FFA500; /* Dorado del altiplano */
+    --gradient-primary: linear-gradient(135deg, #FF9500, #FFB84D);
+    --gradient-secondary: linear-gradient(135deg, #FFB84D, #FFC266);
+    --gradient-accent: linear-gradient(135deg, #FFC266, #FFD699);
+    --gradient-warm: linear-gradient(135deg, #FFA500, #FF8C00);
 }
 
 * {
@@ -22,7 +28,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     min-height: 100vh;
     color: var(--text-dark);
 }
@@ -36,10 +42,10 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: var(--gradient-warm);
     color: white;
     padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(255, 149, 0, 0.3);
 }
 
 .header-content {
@@ -92,11 +98,11 @@ body {
 .nav-tab.active {
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
-    background: rgba(46, 125, 50, 0.05);
+    background: rgba(255, 149, 0, 0.1);
 }
 
 .nav-tab:hover {
-    background: rgba(46, 125, 50, 0.1);
+    background: rgba(255, 149, 0, 0.15);
 }
 
 /* Screens */
@@ -119,12 +125,12 @@ body {
 }
 
 .altiplano-banner {
-    background: linear-gradient(135deg, var(--altiplano-gold), var(--secondary-color));
-    color: white;
+    background: var(--gradient-secondary);
+    color: var(--text-dark);
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.2);
 }
 
 .altiplano-banner h2 {
@@ -146,7 +152,7 @@ body {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
 }
 
 .name-input-section label {
@@ -191,8 +197,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: #1B5E20;
+    background: var(--gradient-warm);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 149, 0, 0.4);
 }
 
 .btn-primary:disabled {
@@ -202,23 +209,26 @@ body {
 }
 
 .btn-secondary {
-    background: var(--text-light);
+    background: var(--gradient-secondary);
     color: white;
 }
 
 .btn-secondary:hover {
-    background: #5D6D7E;
+    background: var(--gradient-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 77, 0.4);
 }
 
 .btn-doctor {
-    background: var(--success-color);
+    background: var(--gradient-primary);
     color: white;
     font-size: 1.1rem;
 }
 
 .btn-doctor:hover {
-    background: #1E8449;
+    background: var(--gradient-secondary);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 149, 0, 0.4);
 }
 
 /* Symptoms Grid */
@@ -261,14 +271,14 @@ body {
 
 .symptom-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.25);
 }
 
 .symptom-card.selected {
     border-color: var(--primary-color);
-    background: rgba(46, 125, 50, 0.05);
+    background: rgba(255, 149, 0, 0.15);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.3);
 }
 
 .symptom-icon {
@@ -301,7 +311,7 @@ body {
     border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.2);
 }
 
 .diagnosis-card h3 {
@@ -336,7 +346,7 @@ body {
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
 }
 
 .disease-card h4 {
@@ -353,7 +363,7 @@ body {
 }
 
 .recommendation-item {
-    background: rgba(46, 125, 50, 0.05);
+    background: rgba(255, 149, 0, 0.1);
     padding: 1rem;
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
@@ -384,11 +394,12 @@ body {
 
 /* Disease Images */
 .disease-images {
-    background: linear-gradient(135deg, rgba(46, 125, 50, 0.1), rgba(21, 101, 192, 0.1));
+    background: var(--gradient-accent);
     padding: 1rem;
     border-radius: 12px;
     margin: 1rem 0;
-    border: 2px dashed var(--border-color);
+    border: 2px dashed var(--primary-color);
+    opacity: 0.8;
 }
 
 .disease-images:hover {
@@ -398,14 +409,14 @@ body {
 
 /* WhatsApp Button Enhancements */
 .btn-doctor {
-    background: linear-gradient(135deg, #25D366, #128C7E);
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     position: relative;
     overflow: hidden;
 }
 
 .btn-doctor:hover {
-    background: linear-gradient(135deg, #128C7E, #25D366);
+    background: linear-gradient(135deg, #128C7E, #25D366) !important;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     transform: translateY(-3px);
 }
@@ -470,7 +481,7 @@ body {
     background: var(--card-bg);
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -506,7 +517,7 @@ body {
 }
 
 .virtue-badge {
-    background: rgba(46, 125, 50, 0.1);
+    background: rgba(255, 149, 0, 0.15);
     color: var(--primary-color);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
@@ -536,7 +547,7 @@ body {
     border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
 }
 
 .history-date {
@@ -696,14 +707,14 @@ body {
     outline-offset: 2px;
 }
 
-/* Estilos para modo oscuro (opcional) */
+/* Estilos para modo oscuro deshabilitado - mantenemos colores claros */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #1a1a1a;
-        --card-bg: #2d2d2d;
-        --text-dark: #ffffff;
-        --text-light: #cccccc;
-        --border-color: #404040;
+        --background: #FEFEFE;
+        --card-bg: #FFFFFF;
+        --text-dark: #7A7A7A;
+        --text-light: #A8A8A8;
+        --border-color: #F0F0F0;
     }
 }
 
@@ -772,11 +783,61 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 149, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+}
+
+/* Estilos para galería de imágenes reales */
+.real-images-gallery {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(255, 149, 0, 0.15);
+    margin: 1rem 0;
+}
+
+.real-images-gallery img {
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    filter: brightness(1.05) saturate(0.9);
+}
+
+.real-images-gallery img:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+    filter: brightness(1.1) saturate(1);
+}
+
+/* Mejoras adicionales para colores pastel */
+.altiplano-banner {
+    background: var(--gradient-secondary);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.member-avatar {
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 15px rgba(168, 213, 186, 0.3);
+}
+
+.disease-card {
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.disease-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 213, 186, 0.2);
+    border-color: var(--primary-color);
+}
+
+/* Estilos para información de WhatsApp */
+.whatsapp-info {
+    background: rgba(37, 211, 102, 0.1) !important;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    border-radius: 12px;
 }
 
 /* Mejoras para pantallas táctiles */
@@ -794,5 +855,36 @@ body {
     
     .nav-tab {
         padding: 1.2rem;
+    }
+    
+    .real-images-gallery img {
+        width: 100px !important;
+        height: 70px !important;
+    }
+}
+
+/* Responsive para imágenes */
+@media (max-width: 768px) {
+    .real-images-gallery {
+        padding: 0.5rem;
+    }
+    
+    .real-images-gallery img {
+        width: 100px !important;
+        height: 70px !important;
+        margin: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .real-images-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .real-images-gallery img {
+        width: 150px !important;
+        height: 100px !important;
+        margin: 0.5rem 0;
     }
 }
